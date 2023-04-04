@@ -40,12 +40,12 @@
                 <div class="pr-2 " id="hide"><i class="fa-solid fa-xmark text-2xl"></i></div>
             </div>
             <div class="py-4"></div>
-            <ul class="space-y-4 ">
-                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#">Home</a></li>
-                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#skills">Skills</a></li>
-                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#projects">My Projects</a></li>
-                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#about">About</a></li>
-                <li class="text-md font-medium cursor-pointer hover:text-blue-500 ">
+            <ul class="space-y-4 " id="mobile-nav-list">
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500  close" id="nav-item1"><a href="#">Home</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500  close" id="nav-item2"><a href="#skills">Skills</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500  close" id="nav-item3"><a href="#projects">My Projects</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500  close" id="nav-item4"><a href="#about">About</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500  close" id="nav-item5">
                     <a href="about"></a>
                 </li>
             </ul>
@@ -68,7 +68,9 @@
                 <h2 class="text-3xl font-bold">I am <span class="text-3xl font-bolder text-blue-500 hover:text-blue-400">Pyae Sone Hein</span></h2>
                 <h2 class="text-3xl font-bold text-red-400">FullStack Web Developer</h2>
                 <div class="mt-4">
-                    <button class="px-6 py-1.5 rounded bg-indigo-700 text-white text-md font-medium">Contact</button>
+                    <a href="#contact">
+                        <button class="px-6 py-1.5 rounded bg-indigo-700 text-white text-md font-medium">Contact</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -77,6 +79,7 @@
                 <img src="./img/myimg.jpg" alt="" class="w-full h-full rounded-full  shadow-md  object-fit">
             </div>
         </div>
+
 
     </div>
     <!-- hero end -->
@@ -380,6 +383,26 @@
     })
 
     document.getElementById('hide').addEventListener('click', () => {
+        document.getElementById('mobile').classList.add('hidden');
+    })
+
+    document.getElementById('nav-item1').addEventListener('click', () => {
+        document.getElementById('mobile').classList.add('hidden');
+    })
+
+    document.getElementById('nav-item2').addEventListener('click', () => {
+        document.getElementById('mobile').classList.add('hidden');
+    })
+
+    document.getElementById('nav-item3').addEventListener('click', () => {
+        document.getElementById('mobile').classList.add('hidden');
+    })
+
+    document.getElementById('nav-item4').addEventListener('click', () => {
+        document.getElementById('mobile').classList.add('hidden');
+    })
+
+    document.getElementById('nav-item5').addEventListener('click', () => {
         document.getElementById('mobile').classList.add('hidden');
     })
 </script>
