@@ -8,6 +8,8 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="">
@@ -29,8 +31,25 @@
         </ul>
         <!-- section end -->
         <!-- mobile view -->
-        <div class="block md:hidden pr-2">
+        <div class="md:hidden block" id="show">
             <i class="fa-solid fa-bars text-2xl"></i>
+        </div>
+        <div id="mobile" class=" hidden  pr-2 fixed top-0 py-4 left-0 z-50 w-full h-screen bg-white  px-4 animate__animated animate__fadeInRight animate__faster">
+            <div class="flex justify-between items-center">
+                <h4 class="font-bold tracking-wide text-lg  cursor-pointer hover:text-blue-500">Pyae Sone Hein</h4>
+                <div class="pr-2 " id="hide"><i class="fa-solid fa-xmark text-2xl"></i></div>
+            </div>
+            <div class="py-4"></div>
+            <ul class="space-y-4 ">
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#">Home</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#skills">Skills</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#projects">My Projects</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500 "><a href="#about">About</a></li>
+                <li class="text-md font-medium cursor-pointer hover:text-blue-500 ">
+                    <a href="about"></a>
+                </li>
+            </ul>
+
         </div>
 
     </nav>
@@ -349,6 +368,20 @@
     <footer class="py-10 mt-10 text-center text-indigo-700 font-extrabold text-sm tracking-wider border border-gray-300 shadow">
         Pyae Sone Hein (hpyaesone265@gmail.com)
     </footer>
+
+
 </body>
+
+<script>
+    document.getElementById('show').addEventListener('click', () => {
+        // document.getElementById('show').classList.add('hidden');
+        document.getElementById('mobile').classList.remove('hidden');
+
+    })
+
+    document.getElementById('hide').addEventListener('click', () => {
+        document.getElementById('mobile').classList.add('hidden');
+    })
+</script>
 
 </html>
